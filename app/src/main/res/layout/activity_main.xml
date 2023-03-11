@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hexa"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBottom_toTopOf="@id/et_hex"
+            app:layout_constraintStart_toStartOf="@id/et_hex" />
+
+
+        <EditText
+            android:id="@+id/et_hex"
+            style="@style/main_editText_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:hint="@string/hexa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+        <TextView
+            android:id="@+id/tv_binary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:text="@string/binary"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintStart_toStartOf="@id/et_hex"
+            app:layout_constraintTop_toBottomOf="@id/et_hex" />
+
+        <EditText
+            android:id="@+id/et_bin"
+            style="@style/main_editText_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/binary"
+            app:layout_constraintEnd_toEndOf="@id/et_hex"
+            app:layout_constraintStart_toStartOf="@id/et_hex"
+            app:layout_constraintTop_toBottomOf="@id/tv_binary" />
+
+        <TextView
+            android:id="@+id/tv_decimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="@string/decimal"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintStart_toStartOf="@id/tv_binary"
+            app:layout_constraintTop_toBottomOf="@id/et_bin" />
+
+        <EditText
+            android:id="@+id/et_dec"
+            style="@style/main_editText_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/decimal"
+            app:layout_constraintEnd_toEndOf="@id/et_hex"
+            app:layout_constraintStart_toStartOf="@id/et_hex"
+            app:layout_constraintTop_toBottomOf="@id/tv_decimal" />
+
+        <TextView
+            android:id="@+id/tv_octal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="@string/octal"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintStart_toStartOf="@id/et_hex"
+            app:layout_constraintTop_toBottomOf="@id/et_dec" />
+
+        <EditText
+            android:id="@+id/et_oct"
+            style="@style/main_editText_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/octal"
+            app:layout_constraintEnd_toEndOf="@id/et_hex"
+            app:layout_constraintStart_toStartOf="@id/et_hex"
+            app:layout_constraintTop_toBottomOf="@id/tv_octal" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
