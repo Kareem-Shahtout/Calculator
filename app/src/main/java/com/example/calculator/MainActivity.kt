@@ -105,31 +105,31 @@ class MainActivity : AppCompatActivity(), TextWatcher, OnFocusChangeListener {
         }
     }
 
-    private fun clearAllEditTextContent() {
-        when (currentEditText?.id) {
-            editTextBinary.id -> {
-                editTextOctal.setText("")
-                editTextDecimal.setText("")
-                editTextHexadecimal.setText("")
-            }
-            editTextHexadecimal.id -> {
-                editTextDecimal.setText("")
-                editTextOctal.setText("")
-                editTextBinary.setText("")
-            }
-            editTextOctal.id -> {
-                editTextDecimal.setText("")
-                editTextHexadecimal.setText("")
-                editTextBinary.setText("")
-            }
-            else -> {
-                editTextHexadecimal.setText("")
-                editTextBinary.setText("")
-                editTextOctal.setText("")
+    /* private fun clearAllEditTextContent() {
+         when (currentEditText?.id) {
+             editTextBinary.id -> {
+                 editTextOctal.setText("")
+                 editTextDecimal.setText("")
+                 editTextHexadecimal.setText("")
+             }
+             editTextHexadecimal.id -> {
+                 editTextDecimal.setText("")
+                 editTextOctal.setText("")
+                 editTextBinary.setText("")
+             }
+             editTextOctal.id -> {
+                 editTextDecimal.setText("")
+                 editTextHexadecimal.setText("")
+                 editTextBinary.setText("")
+             }
+             else -> {
+                 editTextHexadecimal.setText("")
+                 editTextBinary.setText("")
+                 editTextOctal.setText("")
 
-            }
-        }
-    }
+             }
+         }
+     }*/
 
     override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
     }
@@ -143,7 +143,7 @@ class MainActivity : AppCompatActivity(), TextWatcher, OnFocusChangeListener {
                 currentEditText?.setSelection(text.length - 1)
                 Toast.makeText(this, "Invalid Number", Toast.LENGTH_LONG).show()
             }
-        } else clearAllEditTextContent()
+        } else changeTexts("0")
     }
 
     override fun afterTextChanged(p0: Editable?) {
